@@ -1,0 +1,13 @@
+$text-size-list: (
+  small: $text-size-small,
+  default: $text-size-default,
+  medium: $text-size-medium,
+  large: $text-size-large
+);
+
+@each $label, $size in $text-size-list {
+  .text-#{$label} {
+    font-size: $size !important;
+    line-height: $size !important;
+  }
+}

@@ -1,0 +1,22 @@
+.is-flex {
+  display: flex !important;
+}
+
+.is-flex-column {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+$justify-values: (
+  between: space-between,
+  around: space-around,
+  center: center,
+  start: flex-start,
+  end: flex-end
+);
+
+@each $label, $value in $justify-values {
+  .justify-#{$label} {
+    justify-content: $value;
+  }
+}
